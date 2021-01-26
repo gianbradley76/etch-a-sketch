@@ -11,60 +11,78 @@ html {
 }
 
 body {
+	width: auto;
 	background: #232526;
-	background: linear-gradient(to right, #414345, #232526);
+	background: #3494e6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#ec6ead,
+		#3494e6
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#ec6ead,
+		#3494e6
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+main {
+	margin: auto;
+	margin-top: 5vh;
+	padding: 50px 125px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: fit-content;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 5rem;
+	z-index: 2;
+	backdrop-filter: blur(2rem);
+	box-shadow: 0 0 100px 1px rgb(255, 255, 255);
 }
 
 h1 {
-	padding-top: 5vh;
-	text-align: center;
-	color: wheat;
+	background: linear-gradient(to top, #000428, #004e92);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .container {
-	border: 1px solid wheat;
 	width: 500px;
 	height: 500px;
 	display: grid;
 	margin: 5vh 0;
+	border: 1px solid rgba(240, 240, 240, 0.2);
 }
 
 .hovered {
-	background-color: wheat;
+	background-color: white;
 }
 
 input[type="range"] {
 	cursor: pointer;
 }
 
-.reset-btn {
+.btn {
+	border: none;
 	cursor: pointer;
-
-	opacity: 0.75;
-	color: whitesmoke;
+	background: none;
+	color: black;
 	font-family: "Yusei Magic", sans-serif;
 	font-size: larger;
 	padding: 15px;
 	margin-top: 5vh;
-	border: none;
-	border-radius: 7px;
-	background: #c04848; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#480048,
-		#c04848
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#480048,
-		#c04848
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.reset-btn:hover {
-	opacity: 1;
+#bnw-btn {
+	background: linear-gradient(to left bottom, #777, #000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#rainbow-btn {
+	background: linear-gradient(to right top, #ff8c00, #ff0080);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
